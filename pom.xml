@@ -23,6 +23,7 @@
 
     <modules>
         <module>test-auto-sample</module>
+        <module>test-auto-java-intro</module>
     </modules>
 
 
