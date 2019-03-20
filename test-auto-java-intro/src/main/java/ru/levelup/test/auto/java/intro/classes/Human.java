@@ -25,7 +25,6 @@ public class Human {
 //        this.birthDate = "19/12/1900";
         this.age = age;
         this.gender = gender;
-
     }
 
     public Human(String name, String birthDate, int age, String gender) {
