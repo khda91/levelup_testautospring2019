@@ -34,8 +34,44 @@ public class SampleTest {
         WebElement enterButton = driver.findElement(By.id("login-button"));
         enterButton.click();
 
+        // check title
+        assertEquals("Home Page", driver.getTitle());
+
         // Check user name
         assertEquals("Piter Chailovskii".toUpperCase(), driver.findElement(By.id("user-name")).getText());
+
+        // close browser
+        driver.close();
+    }
+
+
+    @Test
+    public void loginTestDuplicate() {
+        // Init driver
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+
+        // Open page
+        driver.get("https://epam.github.io/JDI/index.html");
+
+        // check title
+        assertEquals("Home Page", driver.getTitle());
+
+        // click user icon
+        driver.findElement(By.id("user-icon")).click();
+
+        // login
+        WebElement userNameTextField = driver.findElement(By.cssSelector("#name"));
+        userNameTextField.sendKeys("epam");
+        WebElement passwordTextField = driver.findElement(By.xpath("//input[@id='password']"));
+        passwordTextField.sendKeys("1234");
+        WebElement enterButton = driver.findElement(By.id("login-button"));
+        enterButton.click();
+
+        // Check user name
+        assertEquals("Piter Chailovskii".toUpperCase(), driver.findElement(By.id("user-name")).getText());
+
+        // actions
 
         // close browser
         driver.close();

@@ -2,7 +2,7 @@ package ru.levelup.test.auto.java.intro;
 
 public class Variables {
 
-    static Object obj1;
+//    static Object obj1; // Object obj1 = null;
 
     public static void main(String[] args) {
         // simple variables
@@ -12,8 +12,24 @@ public class Variables {
         System.out.println(res);
         System.out.println();
 
-        // Classes
+        Object o;
+        int h = 10;
+        if (h != 11) {
+            o = new String();
+            System.out.println(o);
+        }
 
+        Object o1 = null;
+        try {
+            String s = "dsds";
+//            s.equalsIgnoreCase(o1);
+            o1 = new Object();
+        } finally {
+
+        }
+
+        Object obj1 = null;
+        // Classes
         System.out.println("Null obj " + obj1);
         System.out.println();
 
