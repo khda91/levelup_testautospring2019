@@ -103,7 +103,7 @@ public class SampleTest {
         enterButton.click();
 
         // Check user name
-        assertEquals("Piter Chailovskii1".toUpperCase(), driver.findElement(By.id("user-name")).getText());
+        assertEquals("Piter Chailovskii".toUpperCase(), driver.findElement(By.id("user-name")).getText());
 
         // actions
 
