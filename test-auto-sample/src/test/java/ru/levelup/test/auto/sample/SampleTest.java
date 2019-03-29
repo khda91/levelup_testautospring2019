@@ -1,6 +1,7 @@
 package ru.levelup.test.auto.sample;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Story;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +13,7 @@ import static org.junit.Assert.assertEquals;
 public class SampleTest {
 
     @Test
+    @Story("Title 1")
     public void loginTest() {
         // Init driver
         WebDriverManager.chromedriver().setup();

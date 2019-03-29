@@ -19,6 +19,8 @@
         <selenium.webdriver.version>3.141.59</selenium.webdriver.version>
         <webdirver.manager.version>3.3.0</webdirver.manager.version>
         <junit.version>4.12</junit.version>
+        <allure.version>2.10.0</allure.version>
+        <aspectj.version>1.8.10</aspectj.version>
     </properties>
 
     <modules>
