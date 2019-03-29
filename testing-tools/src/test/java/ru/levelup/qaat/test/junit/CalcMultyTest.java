@@ -26,13 +26,13 @@ public class CalcMultyTest {
     @Test
     public void sumIntNegativeTest() {
         int result = calc.multiply(2, 2);
-        assertEquals(6, result);
+        assertEquals(4, result);
     }
 
     @Test
     public void sumIntNegativeTestWithMessage() {
         int result = calc.multiply(2, 2);
-        assertEquals("Invalid result", 8, result);
+        assertEquals("Invalid result", 4, result);
     }
 
     @After

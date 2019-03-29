@@ -71,7 +71,7 @@ public class SampleTest {
         enterButton.click();
 
         // Check user name
-        assertEquals("Piter Chailovskii1".toUpperCase(), driver.findElement(By.id("user-name")).getText());
+        assertEquals("Piter Chailovskii".toUpperCase(), driver.findElement(By.id("user-name")).getText());
 
         // actions
 
@@ -95,7 +95,7 @@ public class SampleTest {
         driver.findElement(By.id("user-icon")).click();
 
         // login
-        WebElement userNameTextField = null; //= driver.findElement(By.cssSelector("#name"));
+        WebElement userNameTextField = driver.findElement(By.cssSelector("#name"));
         userNameTextField.sendKeys("epam");
         WebElement passwordTextField = driver.findElement(By.xpath("//input[@id='password']"));
         passwordTextField.sendKeys("1234");

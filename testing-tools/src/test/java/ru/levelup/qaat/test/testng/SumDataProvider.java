@@ -9,7 +9,7 @@ public class SumDataProvider {
     public Object[][] doubleSumDataProvider() {
         return new Object[][]{
                 {2.0, 4.0, 6.0},
-                {-3.5, 0.0, 3.5},
+                {-3.5, 0.0, -3.5},
                 {2.0, 20.0, 22.0},
                 {4.0, 4.0, 8.0},
                 {2.0, 2.0, 4.0},

@@ -22,7 +22,7 @@ public class CalcMultiplyTest {
     public Object[][] doubleMultliplyDataProvider() {
         return new Object[][]{
                 {2.0, 4.0, 8.0},
-                {-3.5, 0.0, 0.0},
+                {-3.5, 0.0, -0.0},
                 {2.0, 20.0, 40.0},
                 {4.0, 4.0, 16.0},
                 {2.0, 2.0, 4.0},

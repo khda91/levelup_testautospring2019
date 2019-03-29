@@ -20,13 +20,13 @@ public class CalcSumTest {
     @Test
     public void sumIntNegativeTest() {
         int result = calc.sum(2, 2);
-        assertEquals(6, result);
+        assertEquals(4, result);
     }
 
     @Test
     public void sumIntNegativeTestWithMessage() {
         int result = calc.sum(2, 2);
-        assertEquals("Invalid result", 8, result);
+        assertEquals("Invalid result", 4, result);
     }
 
     @Test
