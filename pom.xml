@@ -16,7 +16,7 @@
         <encoding.source>UTF-8</encoding.source>
 
         <!-- libs versions -->
-        <selenium.webdriver.version>3.141.59</selenium.webdriver.version>
+        <selenium.webdriver.version>3.14.0</selenium.webdriver.version>
         <webdirver.manager.version>3.4.0</webdirver.manager.version>
         <junit.version>4.12</junit.version>
         <testng.version>6.14.3</testng.version>
