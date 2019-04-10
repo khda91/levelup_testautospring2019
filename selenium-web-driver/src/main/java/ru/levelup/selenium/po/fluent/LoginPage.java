@@ -1,18 +1,14 @@
-package ru.levelup.selenium.po.voids;
+package ru.levelup.selenium.po.fluent;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import ru.levelup.selenium.po.voids.base.BasePage;
+import ru.levelup.selenium.po.fluent.base.BasePage;
 
 public class LoginPage extends BasePage {
 
-//    @FindBy(id = "username")
-//    private WebElement usernameTextField;
     private WebElement username;
 
-//    @FindBy(id = "password")
-//    private WebElement passwordTextField;
     private WebElement password;
 
     @FindBy(xpath = "//input[@value='Login']")
@@ -22,13 +18,11 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
-    public void login(final String username, final String password) {
-        // 2. Авторизоваться admin:admin
-//        usernameTextField.sendKeys(username);
+    public HomePage login(final String username, final String password) {
         this.username.sendKeys(username);
         loginButton.click();
-//        passwordTextField.sendKeys(password);
         this.password.sendKeys(password);
         loginButton.click();
+        return new HomePage(driver);
     }
 }
