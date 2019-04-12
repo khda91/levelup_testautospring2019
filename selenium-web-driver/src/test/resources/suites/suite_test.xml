@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--<?xml version="1.1" encoding="UTF-8" ?>-->
+<suite name="Page Object Tests">
+
+    <test name="Tests">
+        <classes>
+            <class name="ru.levelup.selenium.page.objects.SeleniumFluentPageObjectTest"/>
+            <class name="ru.levelup.selenium.page.objects.SeleniumVoidPageObjectTest"/>
+        </classes>
+    </test>
+
+</suite>

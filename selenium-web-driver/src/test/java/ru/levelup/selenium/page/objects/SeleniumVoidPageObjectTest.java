@@ -17,7 +17,7 @@ import ru.levelup.selenium.po.voids.enums.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SeleniumVoidPageObjectTest extends BaseTest {
+public class    SeleniumVoidPageObjectTest extends BaseTest {
 
     /**
      * 1. Открыть MantisBT: http://khda91.fvds.ru/mantisbt/
