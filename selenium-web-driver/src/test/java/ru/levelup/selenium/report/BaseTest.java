@@ -1,14 +1,18 @@
-package ru.levelup.selenium.page.objects;
+package ru.levelup.selenium.report;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import ru.levelup.selenium.po.voids.LoginPage;
+import ru.levelup.selenium.report.steps.ActionStep;
+import ru.levelup.selenium.report.steps.AssertionsStep;
+import ru.levelup.selenium.report.steps.ModelStep;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -20,6 +24,10 @@ public abstract class BaseTest {
 
     protected WebDriver driver;
     private ChromeOptions options;
+
+    protected ModelStep modelStep;
+    protected ActionStep actionStep;
+    protected AssertionsStep assertionsStep;
 
     @BeforeSuite(alwaysRun = true)
     protected void setUpSuite() {
@@ -46,6 +54,7 @@ public abstract class BaseTest {
     }
 
     @BeforeMethod(alwaysRun = true)
+    @Step("Open browser")
     protected void setUpTest() {
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
@@ -53,16 +62,21 @@ public abstract class BaseTest {
         driver.manage().timeouts().setScriptTimeout(15000, TimeUnit.MILLISECONDS);
         // 1. Открыть MantisBT: http://khda91.fvds.ru/mantisbt/
         driver.get("http://khda91.fvds.ru/mantisbt/");
+
+        modelStep = new ModelStep(driver);
+        actionStep = new ActionStep(driver);
+        assertionsStep = new AssertionsStep(driver);
     }
 
     @AfterMethod(alwaysRun = true)
+    @Step("Close browser")
     protected void closeBrowser() {
         //  9. Закрыть браузер
         driver.close();
     }
 
-    @AfterSuite(alwaysRun = true)
-    protected void closeAll() {
-        driver.quit();
+    @Step("Login as user '{0}' with password '{1}'")
+    protected void login(final String username, final String password) {
+        new LoginPage(driver).login(username, password);
     }
 }
