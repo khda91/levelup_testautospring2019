@@ -29,6 +29,7 @@
         <module>test-auto-java-intro</module>
         <module>testing-tools</module>
         <module>selenium-web-driver</module>
+        <module>api-testing</module>
     </modules>
 
     <build>
