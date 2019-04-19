@@ -1,6 +1,8 @@
 package ru.levelup.test.auto.java.exercises.collections;
 
-public class Sku {
+import java.io.Serializable;
+
+public class Sku implements Serializable {
 
     private String name;
     private double price;

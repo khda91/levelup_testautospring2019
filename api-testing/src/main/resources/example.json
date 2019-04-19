@@ -1,0 +1,61 @@
+[  // @JsonInclude(JsonInclude.Include.NON_NULL) не добавлена над класом
+  {
+   "id": null,
+    "name": null,
+    "language": null,
+    "username": "DuYrUsHNOZ",
+    "password": "p@ssw0rd",
+    "email": "m@mmmm.com",
+    "enabled": true,
+    "projects": null,
+    "real_name": "dDAEmtFSnJ",
+    "access_level": {
+      "name": "updater"
+    },
+    "protected": false
+  },
+
+  // @JsonInclude(JsonInclude.Include.NON_NULL) не добавлена над класом + List
+  {
+    "id": null,
+    "name": null,
+    "language": null,
+    "username": "IqjcynItVM",
+    "password": "p@ssw0rd",
+    "email": "m@mmmm.com",
+    "enabled": true,
+    "projects": [],
+    "real_name": "mJLlIUgSis",
+    "access_level": {
+      "name": "updater"
+    },
+    "protected": false
+  },
+
+  // @JsonInclude(JsonInclude.Include.NON_NULL) добавлена над класом + List
+  {
+    "username": "IqjcynItVM",
+    "password": "p@ssw0rd",
+    "email": "m@mmmm.com",
+    "enabled": true,
+    "projects": [],
+    "real_name": "mJLlIUgSis",
+    "access_level": {
+      "name": "updater"
+    },
+    "protected": false
+  },
+
+  // @JsonInclude(JsonInclude.Include.NON_EMPTY) добавлена над класом + List
+  {
+    "username": "DxLZjluJZJ",
+    "password": "p@ssw0rd",
+    "email": "m@mmmm.com",
+    "enabled": true,
+    "real_name": "nQErOKGtcf",
+    "access_level": {
+      "name": "updater"
+    },
+    "protected": false
+  }
+]

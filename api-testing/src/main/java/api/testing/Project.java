@@ -6,8 +6,9 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-@JsonInclude(JsonInclude.Include.NON_NULL)
-public class UserAccessLevel {
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
+public class Project {
 
+    private String id;
     private String name;
 }
