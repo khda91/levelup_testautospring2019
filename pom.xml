@@ -30,6 +30,7 @@
         <module>testing-tools</module>
         <module>selenium-web-driver</module>
         <module>api-testing</module>
+        <module>design-patterns</module>
     </modules>
 
     <build>
