@@ -1,0 +1,540 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="noindex,follow" />
+	<title>My View - MantisBT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link rel="stylesheet" type="text/css" href="http://khda91.fvds.ru/mantisbt/css/default.css" />
+	<link rel="stylesheet" type="text/css" href="http://khda91.fvds.ru/mantisbt/css/status_config.php?cache_key=4921873ab79efd3a38ae9f077f4568d6" />
+	<link rel="stylesheet" type="text/css" href="http://khda91.fvds.ru/mantisbt/css/dropzone-5.5.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://khda91.fvds.ru/mantisbt/css/bootstrap-3.4.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://khda91.fvds.ru/mantisbt/css/font-awesome-4.6.3.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://khda91.fvds.ru/mantisbt/css/fonts.css" />
+	<link rel="stylesheet" type="text/css" href="http://khda91.fvds.ru/mantisbt/css/bootstrap-datetimepicker-4.17.47.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://khda91.fvds.ru/mantisbt/css/ace.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://khda91.fvds.ru/mantisbt/css/ace-mantis.css" />
+	<link rel="stylesheet" type="text/css" href="http://khda91.fvds.ru/mantisbt/css/ace-skins.min.css" />
+
+	<link rel="shortcut icon" href="/mantisbt/images/favicon.ico" type="image/x-icon" />
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: full-text search" href="http://khda91.fvds.ru/mantisbt/browser_search_plugin.php?type=text" />
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: search by Issue Id" href="http://khda91.fvds.ru/mantisbt/browser_search_plugin.php?type=id" />
+	<script type="text/javascript" src="/mantisbt/javascript_config.php?cache_key=4921873ab79efd3a38ae9f077f4568d6"></script>
+	<script type="text/javascript" src="/mantisbt/javascript_translations.php?cache_key=2320cfd00c6ad9a9803f6c468999c270"></script>
+	<script type="text/javascript" src="/mantisbt/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="/mantisbt/js/dropzone-5.5.0.min.js"></script>
+	<script type="text/javascript" src="/mantisbt/js/common.js"></script>
+	<meta http-equiv="Refresh" content="1800; URL=http://khda91.fvds.ru/mantisbt/my_view_page.php?refresh=true" />
+</head>
+<body class="skin-3">
+<style>
+* { font-family: "Open Sans"; } 
+h1, h2, h3, h4, h5 { font-family: "Open Sans"; } 
+</style>
+<div id="navbar" class="navbar navbar-default navbar-collapse navbar-fixed-top noprint"><div id="navbar-container" class="navbar-container"><button id="menu-toggler" type="button" class="navbar-toggle menu-toggler pull-left hidden-lg hidden-md" data-target="#sidebar"><span class="sr-only">Toggle sidebar</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div class="navbar-header"><a href="/mantisbt/my_view_page.php" class="navbar-brand"><span class="smaller-75"> MantisBT </span></a><button type="button" class="navbar-toggle navbar-toggle collapsed pull-right hidden-sm hidden-md hidden-lg" data-toggle="collapse" data-target=".navbar-buttons,.navbar-menu"><span class="sr-only">Toggle user menu</span><i class="ace-icon fa fa-user fa-2x white"></i> </button></div><div class="navbar-buttons navbar-header navbar-collapse collapse"><ul class="nav ace-nav"><li class="hidden-sm hidden-xs"><div class="btn-group btn-corner padding-right-8 padding-left-8"><a class="btn btn-primary btn-sm" href="bug_report_page.php"><i class="fa fa-edit"></i> Report Issue</a><a class="btn btn-primary btn-sm" href="manage_user_create_page.php"><i class="fa fa-user-plus"></i> Invite Users</a></div></li><li class="grey" id="dropdown_projects_menu">
+<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+ All Projects 
+ <i class="ace-icon fa fa-angle-down bigger-110"></i>
+</a>
+<ul class="dropdown-menu dropdown-menu-right dropdown-yellow dropdown-caret dropdown-close scrollable-menu">
+<li class="active"><a href="/mantisbt/set_project.php?project_id=0">All Projects </a></li>
+<li class="divider"></li>
+<li><div id="projects-list"><div class="projects-searchbox"><input class="search form-control input-md" placeholder="Search" /></div><ul class="list dropdown-yellow no-margin"><li><a href="/mantisbt/set_project.php?project_id=73" class="project-link"> 11 </a></li><li><a href="/mantisbt/set_project.php?project_id=205" class="project-link"> 111111first project111 </a></li><li><a href="/mantisbt/set_project.php?project_id=204" class="project-link"> 11111first project1stable </a></li><li><a href="/mantisbt/set_project.php?project_id=203" class="project-link"> 11111first projectstable </a></li><li><a href="/mantisbt/set_project.php?project_id=150" class="project-link"> 2222222 </a></li><li><a href="/mantisbt/set_project.php?project_id=145" class="project-link"> 232323 </a></li><li><a href="/mantisbt/set_project.php?project_id=105" class="project-link"> 44444 </a></li><li><a href="/mantisbt/set_project.php?project_id=146" class="project-link"> 928392839283923829 </a></li><li><a href="/mantisbt/set_project.php?project_id=55" class="project-link"> AlexanderEdomsky </a></li><li><a href="/mantisbt/set_project.php?project_id=154" class="project-link"> CVLQcYAFXa </a></li><li><a href="/mantisbt/set_project.php?project_id=153" class="project-link"> dMKKFWbQRA </a></li><li><a href="/mantisbt/set_project.php?project_id=106" class="project-link"> eee </a></li><li><a href="/mantisbt/set_project.php?project_id=141" class="project-link"> GeUJyenzAY </a></li><li><a href="/mantisbt/set_project.php?project_id=132" class="project-link"> gProjYZ104809 </a></li><li><a href="/mantisbt/set_project.php?project_id=62" class="project-link"> gswqdewg </a></li><li><a href="/mantisbt/set_project.php?project_id=152" class="project-link"> iUZtoxZVMx </a></li><li><a href="/mantisbt/set_project.php?project_id=104" class="project-link"> kek </a></li><li><a href="/mantisbt/set_project.php?project_id=108" class="project-link"> NDfKGGNuFc </a></li><li><a href="/mantisbt/set_project.php?project_id=206" class="project-link"> NewProject </a></li><li><a href="/mantisbt/set_project.php?project_id=114" class="project-link"> PProjYZ887509 </a></li><li><a href="/mantisbt/set_project.php?project_id=131" class="project-link"> ProjectYZ01_test </a></li><li><a href="/mantisbt/set_project.php?project_id=96" class="project-link"> pvgzjxFMgt </a></li><li><a href="/mantisbt/set_project.php?project_id=107" class="project-link"> RTS-project </a></li><li><a href="/mantisbt/set_project.php?project_id=29" class="project-link"> sdsd </a></li><li><a href="/mantisbt/set_project.php?project_id=87" class="project-link"> test </a></li><li><a href="/mantisbt/set_project.php?project_id=144" class="project-link"> Test1 </a></li><li><a href="/mantisbt/set_project.php?project_id=147" class="project-link"> wewe </a></li><li><a href="/mantisbt/set_project.php?project_id=208" class="project-link"> _ne787678343478687687ншw2 </a></li><li><a href="/mantisbt/set_project.php?project_id=207" class="project-link"> _ne78767878687687ншw2 </a></li></ul></div></li></ul>
+</li>
+<li class="grey"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><i class="ace-icon fa fa-user fa-2x white"></i> <span class="user-info">admin</span><i class="ace-icon fa fa-angle-down"></i></a><ul class="user-menu dropdown-menu dropdown-menu-right dropdown-yellow dropdown-caret dropdown-close"><li><a href="/mantisbt/account_page.php"><i class="ace-icon fa fa-user"> </i> My Account</a></li><li><a href="http://khda91.fvds.ru/mantisbt/issues_rss.php?username=admin&amp;key=hnEOE-Tl9YfAQO47OsogRNr412izwnpjO8MWfM-U91YygIMIIDfzRfN3JCqFR9ynSJWqsl1l40lYctrI7LaY"><i class="ace-icon fa fa-rss-square orange"> </i> RSS</a></li><li class="divider"></li><li><a href="/mantisbt/logout_page.php"><i class="ace-icon fa fa-sign-out"> </i> Logout</a></li></ul></li></ul></div></div></div><div class="main-container" id="main-container" style="padding-top: 45px;">
+<div id="sidebar" class="sidebar sidebar-fixed responsive compact "><ul class="nav nav-list"><li class="active">
+<a href="/mantisbt/my_view_page.php">
+<i class="menu-icon fa fa-dashboard"></i> 
+<span class="menu-text"> My View </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/mantisbt/view_all_bug_page.php">
+<i class="menu-icon fa fa-list-alt"></i> 
+<span class="menu-text"> View Issues </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/mantisbt/bug_report_page.php">
+<i class="menu-icon fa fa-edit"></i> 
+<span class="menu-text"> Report Issue </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/mantisbt/changelog_page.php">
+<i class="menu-icon fa fa-retweet"></i> 
+<span class="menu-text"> Change Log </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/mantisbt/roadmap_page.php">
+<i class="menu-icon fa fa-road"></i> 
+<span class="menu-text"> Roadmap </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/mantisbt/summary_page.php">
+<i class="menu-icon fa fa-bar-chart-o"></i> 
+<span class="menu-text"> Summary </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/mantisbt/manage_overview_page.php">
+<i class="menu-icon fa fa-gears"></i> 
+<span class="menu-text"> Manage </span>
+</a>
+<b class="arrow"></b>
+</li>
+</ul><div id="sidebar-btn" class="sidebar-toggle sidebar-collapse"><i data-icon2="ace-icon fa fa-angle-double-right" data-icon1="ace-icon fa fa-angle-double-left" class="ace-icon fa fa-angle-double-left"></i></div></div><div class="main-content">
+<div id="breadcrumbs" class="breadcrumbs noprint">
+<ul class="breadcrumb">
+  <li><i class="fa fa-user home-icon active"></i>  <a href="/mantisbt/account_page.php">admin ( admin ) </a>
+  <span class="label hidden-xs label-default arrowed">administrator</span></li>
+</ul>
+<div id="nav-search" class="nav-search"><form class="form-search" method="post" action="/mantisbt/jump_to_bug.php"><span class="input-icon"><input type="text" name="bug_id" autocomplete="off" class="nav-search-input" placeholder="Issue #" /><i class="ace-icon fa fa-search nav-search-icon"></i></span></form></div>
+</div>
+  <div class="page-content">
+<div class="row">
+<div class="col-xs-12 col-md-7">
+
+<div id="assigned" class="widget-box widget-color-blue2 ">
+	<div class="widget-header widget-header-small">
+		<h4 class="widget-title lighter">
+			<i class="ace-icon fa fa-list-alt"></i>
+<a class="white" href="view_all_set.php?type=1&amp;temporary=y&amp;handler_id=2&amp;hide_status=80">Assigned to Me (Unresolved)</a><span class="badge">  1 - 6 / 6  </span>		</h4>
+		<div class="widget-toolbar">
+			<a data-action="collapse" href="#">
+				<i class="1 ace-icon fa fa-chevron-up bigger-125"></i>
+			</a>
+		</div>
+		<div class="widget-toolbar no-border hidden-xs">
+			<div class="widget-menu">
+				<a class="btn btn-primary btn-white btn-round btn-sm" href="view_all_set.php?type=1&amp;temporary=y&amp;handler_id=2&amp;hide_status=80">View Issues</a>			</div>
+		</div>
+	</div>
+
+	<div class="widget-body">
+		<div class="widget-main no-padding">
+			<div class="table-responsive">
+				<table class="table table-bordered table-condensed table-striped table-hover">
+<tbody>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=10">0000010</a><br /><i class="fa fa-square fa-status-box status-40-color" title="confirmed"></i> <a class="edit" href="bug_update_page.php?bug_id=10"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-up fa-lg red" title="high"></i>	</td>
+
+		<td>
+		<span>[ProjectYZ01_test] </span><span><a href="view.php?id=10">Summary text 04</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-23 02:06</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=5">0000005</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=5"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-down fa-lg green" title="low"></i>	</td>
+
+		<td>
+		<span>[11] </span><span><a href="view.php?id=5">RTS-Issue5</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-21 15:49</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=4">0000004</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=4"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-up fa-lg red" title="high"></i>	</td>
+
+		<td>
+		<span>[11] </span><span><a href="view.php?id=4">RTS-Issue4</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-21 15:48</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=3">0000003</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=3"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-up fa-lg red" title="high"></i>	</td>
+
+		<td>
+		<span>[11] </span><span><a href="view.php?id=3">RTS-Issue3</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-21 15:48</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=2">0000002</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=2"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-up fa-lg red" title="high"></i>	</td>
+
+		<td>
+		<span>[11] </span><span><a href="view.php?id=2">RTS-Issue2</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-21 15:47</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=1">0000001</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=1"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-up fa-lg red" title="high"></i>	</td>
+
+		<td>
+		<span>[11] </span><span><a href="view.php?id=1">RTS-Issue1</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-21 15:46</span>	</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="space-10"></div><div id="unassigned" class="widget-box widget-color-blue2 ">
+	<div class="widget-header widget-header-small">
+		<h4 class="widget-title lighter">
+			<i class="ace-icon fa fa-list-alt"></i>
+<a class="white" href="view_all_set.php?type=1&amp;temporary=y&amp;handler_id=[none]&amp;hide_status=90">Unassigned</a><span class="badge">  0 - 0 / 0  </span>		</h4>
+		<div class="widget-toolbar">
+			<a data-action="collapse" href="#">
+				<i class="1 ace-icon fa fa-chevron-up bigger-125"></i>
+			</a>
+		</div>
+		<div class="widget-toolbar no-border hidden-xs">
+			<div class="widget-menu">
+				<a class="btn btn-primary btn-white btn-round btn-sm" href="view_all_set.php?type=1&amp;temporary=y&amp;handler_id=[none]&amp;hide_status=90">View Issues</a>			</div>
+		</div>
+	</div>
+
+	<div class="widget-body">
+		<div class="widget-main no-padding">
+			<div class="table-responsive">
+				<table class="table table-bordered table-condensed table-striped table-hover">
+<tbody>
+<tr><td> </td></tr></tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="space-10"></div><div id="reported" class="widget-box widget-color-blue2 ">
+	<div class="widget-header widget-header-small">
+		<h4 class="widget-title lighter">
+			<i class="ace-icon fa fa-list-alt"></i>
+<a class="white" href="view_all_set.php?type=1&amp;temporary=y&amp;reporter_id=2&amp;hide_status=90">Reported by Me</a><span class="badge">  1 - 10 / 10  </span>		</h4>
+		<div class="widget-toolbar">
+			<a data-action="collapse" href="#">
+				<i class="1 ace-icon fa fa-chevron-up bigger-125"></i>
+			</a>
+		</div>
+		<div class="widget-toolbar no-border hidden-xs">
+			<div class="widget-menu">
+				<a class="btn btn-primary btn-white btn-round btn-sm" href="view_all_set.php?type=1&amp;temporary=y&amp;reporter_id=2&amp;hide_status=90">View Issues</a>			</div>
+		</div>
+	</div>
+
+	<div class="widget-body">
+		<div class="widget-main no-padding">
+			<div class="table-responsive">
+				<table class="table table-bordered table-condensed table-striped table-hover">
+<tbody>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=10">0000010</a><br /><i class="fa fa-square fa-status-box status-40-color" title="confirmed"></i> <a class="edit" href="bug_update_page.php?bug_id=10"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-up fa-lg red" title="high"></i>	</td>
+
+		<td>
+		<span>[ProjectYZ01_test] </span><span><a href="view.php?id=10">Summary text 04</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-23 02:06</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=8">0000008</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=8"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-down fa-lg green" title="low"></i>	</td>
+
+		<td>
+		<span>[ProjectYZ01_test] </span><span><a href="view.php?id=8">Summary text 02</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-23 02:02</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=9">0000009</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=9"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-up fa-lg red" title="high"></i>	</td>
+
+		<td>
+		<span>[ProjectYZ01_test] </span><span><a href="view.php?id=9">Summary text 03</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-23 02:01</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=7">0000007</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=7"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-up fa-lg red" title="high"></i>	</td>
+
+		<td>
+		<span>[ProjectYZ01_test] </span><span><a href="view.php?id=7">Summary text 01</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-23 01:57</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=6">0000006</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=6"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-exclamation-triangle fa-lg red" title="immediate"></i>	</td>
+
+		<td>
+		<span>[ProjectYZ01_test] </span><span><a href="view.php?id=6">Ничего не работает</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-23 01:53</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=5">0000005</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=5"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-down fa-lg green" title="low"></i>	</td>
+
+		<td>
+		<span>[11] </span><span><a href="view.php?id=5">RTS-Issue5</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-21 15:49</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=4">0000004</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=4"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-up fa-lg red" title="high"></i>	</td>
+
+		<td>
+		<span>[11] </span><span><a href="view.php?id=4">RTS-Issue4</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-21 15:48</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=3">0000003</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=3"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-up fa-lg red" title="high"></i>	</td>
+
+		<td>
+		<span>[11] </span><span><a href="view.php?id=3">RTS-Issue3</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-21 15:48</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=2">0000002</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=2"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-up fa-lg red" title="high"></i>	</td>
+
+		<td>
+		<span>[11] </span><span><a href="view.php?id=2">RTS-Issue2</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-21 15:47</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=1">0000001</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=1"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-up fa-lg red" title="high"></i>	</td>
+
+		<td>
+		<span>[11] </span><span><a href="view.php?id=1">RTS-Issue1</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-21 15:46</span>	</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="space-10"></div><div id="resolved" class="widget-box widget-color-blue2 ">
+	<div class="widget-header widget-header-small">
+		<h4 class="widget-title lighter">
+			<i class="ace-icon fa fa-list-alt"></i>
+<a class="white" href="view_all_set.php?type=1&amp;temporary=y&amp;status=80&amp;hide_status=90">Resolved</a><span class="badge">  0 - 0 / 0  </span>		</h4>
+		<div class="widget-toolbar">
+			<a data-action="collapse" href="#">
+				<i class="1 ace-icon fa fa-chevron-up bigger-125"></i>
+			</a>
+		</div>
+		<div class="widget-toolbar no-border hidden-xs">
+			<div class="widget-menu">
+				<a class="btn btn-primary btn-white btn-round btn-sm" href="view_all_set.php?type=1&amp;temporary=y&amp;status=80&amp;hide_status=90">View Issues</a>			</div>
+		</div>
+	</div>
+
+	<div class="widget-body">
+		<div class="widget-main no-padding">
+			<div class="table-responsive">
+				<table class="table table-bordered table-condensed table-striped table-hover">
+<tbody>
+<tr><td> </td></tr></tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="space-10"></div><div id="recent_mod" class="widget-box widget-color-blue2 ">
+	<div class="widget-header widget-header-small">
+		<h4 class="widget-title lighter">
+			<i class="ace-icon fa fa-list-alt"></i>
+<a class="white" href="view_all_set.php?type=1&amp;temporary=y&amp;hide_status=none&amp;filter_by_last_updated_date=1&amp;last_updated_end_day=26&amp;last_updated_end_month=4&amp;last_updated_end_year=2019&amp;last_updated_start_day=27&amp;last_updated_start_month=3&amp;last_updated_start_year=2019">Recently Modified (30 Days)</a><span class="badge">  1 - 10 / 10  </span>		</h4>
+		<div class="widget-toolbar">
+			<a data-action="collapse" href="#">
+				<i class="1 ace-icon fa fa-chevron-up bigger-125"></i>
+			</a>
+		</div>
+		<div class="widget-toolbar no-border hidden-xs">
+			<div class="widget-menu">
+				<a class="btn btn-primary btn-white btn-round btn-sm" href="view_all_set.php?type=1&amp;temporary=y&amp;hide_status=none&amp;filter_by_last_updated_date=1&amp;last_updated_end_day=26&amp;last_updated_end_month=4&amp;last_updated_end_year=2019&amp;last_updated_start_day=27&amp;last_updated_start_month=3&amp;last_updated_start_year=2019">View Issues</a>			</div>
+		</div>
+	</div>
+
+	<div class="widget-body">
+		<div class="widget-main no-padding">
+			<div class="table-responsive">
+				<table class="table table-bordered table-condensed table-striped table-hover">
+<tbody>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=10">0000010</a><br /><i class="fa fa-square fa-status-box status-40-color" title="confirmed"></i> <a class="edit" href="bug_update_page.php?bug_id=10"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-up fa-lg red" title="high"></i>	</td>
+
+		<td>
+		<span>[ProjectYZ01_test] </span><span><a href="view.php?id=10">Summary text 04</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-23 02:06</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=8">0000008</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=8"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-down fa-lg green" title="low"></i>	</td>
+
+		<td>
+		<span>[ProjectYZ01_test] </span><span><a href="view.php?id=8">Summary text 02</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-23 02:02</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=9">0000009</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=9"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-up fa-lg red" title="high"></i>	</td>
+
+		<td>
+		<span>[ProjectYZ01_test] </span><span><a href="view.php?id=9">Summary text 03</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-23 02:01</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=7">0000007</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=7"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-up fa-lg red" title="high"></i>	</td>
+
+		<td>
+		<span>[ProjectYZ01_test] </span><span><a href="view.php?id=7">Summary text 01</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-23 01:57</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=6">0000006</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=6"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-exclamation-triangle fa-lg red" title="immediate"></i>	</td>
+
+		<td>
+		<span>[ProjectYZ01_test] </span><span><a href="view.php?id=6">Ничего не работает</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-23 01:53</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=5">0000005</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=5"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-down fa-lg green" title="low"></i>	</td>
+
+		<td>
+		<span>[11] </span><span><a href="view.php?id=5">RTS-Issue5</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-21 15:49</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=4">0000004</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=4"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-up fa-lg red" title="high"></i>	</td>
+
+		<td>
+		<span>[11] </span><span><a href="view.php?id=4">RTS-Issue4</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-21 15:48</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=3">0000003</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=3"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-up fa-lg red" title="high"></i>	</td>
+
+		<td>
+		<span>[11] </span><span><a href="view.php?id=3">RTS-Issue3</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-21 15:48</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=2">0000002</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=2"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-up fa-lg red" title="high"></i>	</td>
+
+		<td>
+		<span>[11] </span><span><a href="view.php?id=2">RTS-Issue2</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-21 15:47</span>	</td>
+</tr>
+
+<tr class="my-buglist-bug ">
+		<td class="nowrap width-13 my-buglist-id">
+		<a href="/mantisbt/view.php?id=1">0000001</a><br /><i class="fa fa-square fa-status-box status-50-color" title="assigned"></i> <a class="edit" href="bug_update_page.php?bug_id=1"><i class="fa fa-pencil bigger-130 padding-2 grey" title="Edit"></i></a> <i class="fa fa-chevron-up fa-lg red" title="high"></i>	</td>
+
+		<td>
+		<span>[11] </span><span><a href="view.php?id=1">RTS-Issue1</a></span><br />		<span class="small">[All Projects] General</span><span class="small"> - 2019-04-21 15:46</span>	</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="space-10"></div><div id="monitored" class="widget-box widget-color-blue2 ">
+	<div class="widget-header widget-header-small">
+		<h4 class="widget-title lighter">
+			<i class="ace-icon fa fa-list-alt"></i>
+<a class="white" href="view_all_set.php?type=1&amp;temporary=y&amp;monitor_user_id=2&amp;hide_status=90">Monitored by Me</a><span class="badge">  0 - 0 / 0  </span>		</h4>
+		<div class="widget-toolbar">
+			<a data-action="collapse" href="#">
+				<i class="1 ace-icon fa fa-chevron-up bigger-125"></i>
+			</a>
+		</div>
+		<div class="widget-toolbar no-border hidden-xs">
+			<div class="widget-menu">
+				<a class="btn btn-primary btn-white btn-round btn-sm" href="view_all_set.php?type=1&amp;temporary=y&amp;monitor_user_id=2&amp;hide_status=90">View Issues</a>			</div>
+		</div>
+	</div>
+
+	<div class="widget-body">
+		<div class="widget-main no-padding">
+			<div class="table-responsive">
+				<table class="table table-bordered table-condensed table-striped table-hover">
+<tbody>
+<tr><td> </td></tr></tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="space-10"></div></div>
+
+<div class="col-md-5 col-xs-12">
+	
+<div id="timeline" class="widget-box widget-color-blue2 ">
+	<div class="widget-header widget-header-small">
+		<h4 class="widget-title lighter">
+			<i class="ace-icon fa fa-clock-o"></i>
+			Timeline		</h4>
+		<div class="widget-toolbar">
+			<a data-action="collapse" href="#">
+				<i class="1 ace-icon fa fa-chevron-up bigger-125"></i>
+			</a>
+		</div>
+	</div>
+
+	<div class="widget-body">
+		<div class="widget-toolbox">
+			<div class="btn-toolbar">
+  <span class="label label-grey"> 2019-04-19 </span> .. <span class="label label-grey"> 2019-04-26 </span>  <div class="btn-group"> <a class="btn btn-primary btn-xs btn-white btn-round" href="my_view_page.php?days=7">Prev</a></div>			</div>
+		</div>
+
+		<div class="widget-main no-padding">
+			<div class="profile-feed">
+			</div>
+		</div>
+
+<div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-flag-o btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> picked up issue <span class="issue_id"><a href="/mantisbt/view.php?id=10" title="[confirmed] Summary text 04">0000010</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-23 02:01</div></div><div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-plus btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> created issue <span class="issue_id"><a href="/mantisbt/view.php?id=10" title="[confirmed] Summary text 04">0000010</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-23 02:01</div></div><div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-hand-o-right btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> assigned issue <span class="issue_id"><a href="/mantisbt/view.php?id=9" title="[assigned] Summary text 03">0000009</a></span> to <span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=130">UserYZ01_test</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-23 02:01</div></div><div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-plus btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> created issue <span class="issue_id"><a href="/mantisbt/view.php?id=9" title="[assigned] Summary text 03">0000009</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-23 02:01</div></div><div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-hand-o-right btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> assigned issue <span class="issue_id"><a href="/mantisbt/view.php?id=8" title="[assigned] Summary text 02">0000008</a></span> to <span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=130">UserYZ01_test</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-23 02:00</div></div><div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-plus btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> created issue <span class="issue_id"><a href="/mantisbt/view.php?id=8" title="[assigned] Summary text 02">0000008</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-23 02:00</div></div><div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-hand-o-right btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> assigned issue <span class="issue_id"><a href="/mantisbt/view.php?id=7" title="[assigned] Summary text 01">0000007</a></span> to <span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=130">UserYZ01_test</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-23 01:57</div></div><div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-plus btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> created issue <span class="issue_id"><a href="/mantisbt/view.php?id=7" title="[assigned] Summary text 01">0000007</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-23 01:57</div></div><div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-hand-o-right btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> assigned issue <span class="issue_id"><a href="/mantisbt/view.php?id=6" title="[assigned] Ничего не работает">0000006</a></span> to <span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=130">UserYZ01_test</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-23 01:53</div></div><div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-plus btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> created issue <span class="issue_id"><a href="/mantisbt/view.php?id=6" title="[assigned] Ничего не работает">0000006</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-23 01:53</div></div><div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-flag-o btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> picked up issue <span class="issue_id"><a href="/mantisbt/view.php?id=5" title="[assigned] RTS-Issue5">0000005</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-21 15:49</div></div><div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-plus btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> created issue <span class="issue_id"><a href="/mantisbt/view.php?id=5" title="[assigned] RTS-Issue5">0000005</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-21 15:49</div></div><div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-flag-o btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> picked up issue <span class="issue_id"><a href="/mantisbt/view.php?id=4" title="[assigned] RTS-Issue4">0000004</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-21 15:48</div></div><div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-plus btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> created issue <span class="issue_id"><a href="/mantisbt/view.php?id=4" title="[assigned] RTS-Issue4">0000004</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-21 15:48</div></div><div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-flag-o btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> picked up issue <span class="issue_id"><a href="/mantisbt/view.php?id=3" title="[assigned] RTS-Issue3">0000003</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-21 15:48</div></div><div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-plus btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> created issue <span class="issue_id"><a href="/mantisbt/view.php?id=3" title="[assigned] RTS-Issue3">0000003</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-21 15:48</div></div><div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-flag-o btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> picked up issue <span class="issue_id"><a href="/mantisbt/view.php?id=2" title="[assigned] RTS-Issue2">0000002</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-21 15:47</div></div><div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-plus btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> created issue <span class="issue_id"><a href="/mantisbt/view.php?id=2" title="[assigned] RTS-Issue2">0000002</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-21 15:47</div></div><div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-flag-o btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> picked up issue <span class="issue_id"><a href="/mantisbt/view.php?id=1" title="[assigned] RTS-Issue1">0000001</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-21 15:46</div></div><div class="profile-activity clearfix"><i class="pull-left thumbicon fa fa-plus btn-primary no-hover"></i><div class="action"><span class="username"><a href="http://khda91.fvds.ru/mantisbt/view_user_page.php?id=2">admin</a></span> created issue <span class="issue_id"><a href="/mantisbt/view.php?id=1" title="[assigned] RTS-Issue1">0000001</a></span></div><div class="time"><i class="ace-icon fa fa-clock-o bigger-110"></i> 2019-04-21 15:46</div></div>
+	</div>
+</div>
+	<div class="space-10"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="space-20"></div>
+<div class="footer noprint">
+<div class="footer-inner">
+<div class="footer-content">
+<div class="col-md-6 col-xs-12 no-padding">
+<address>
+<strong>Powered by <a href="https://www.mantisbt.org" title="bug tracking software">MantisBT </a></strong> <br />
+<small>Copyright © 2000 - 2019 MantisBT Team</small><br /><small>Contact <a href="mailto:webmaster@example.com" title="Contact the webmaster via e-mail.">administrator</a> for assistance</small><br />
+</address>
+</div>
+<div class="col-md-6 col-xs-12">
+<div class="pull-right" id="powered-by-mantisbt-logo">
+<a href="https://www.mantisbt.org" title="Mantis Bug Tracker: a free and open source web based bug tracking system."><img src="/mantisbt/images/mantis_logo.png" width="102" height="35" alt="Powered by Mantis Bug Tracker: a free and open source web based bug tracking system." /></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="btn-scroll-up btn btn-sm btn-inverse display" id="btn-scroll-up" href="#">
+<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+</a>
+</div>
+	<script type="text/javascript" src="/mantisbt/js/bootstrap-3.4.0.min.js"></script>
+	<script type="text/javascript" src="/mantisbt/js/moment-with-locales-2.15.2.min.js"></script>
+	<script type="text/javascript" src="/mantisbt/js/bootstrap-datetimepicker-4.17.47.min.js"></script>
+	<script type="text/javascript" src="/mantisbt/js/typeahead.jquery-1.1.1.min.js"></script>
+	<script type="text/javascript" src="/mantisbt/js/list-1.5.0.min.js"></script>
+	<script type="text/javascript" src="/mantisbt/js/ace.min.js"></script>
+
+
+</body></html>

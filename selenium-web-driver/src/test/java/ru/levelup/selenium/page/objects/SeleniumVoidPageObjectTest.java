@@ -6,6 +6,7 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItem;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.levelup.selenium.po.voids.HomePage;
@@ -41,7 +42,8 @@ public class    SeleniumVoidPageObjectTest extends BaseTest {
 //        System.out.println("PATH_TO_TEST_DATA: " + System.getenv());
         super.setUpTest();
         new LoginPage(driver).login("admin", "admin");
-        homePage = new HomePage(driver);
+//        homePage = new HomePage(driver);
+        homePage  = PageFactory.initElements(driver, HomePage.class);
         managePage = new ManagePage(driver);
         manageTabPage = new ManageTabPage(driver);
     }
